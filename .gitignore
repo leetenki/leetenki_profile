@@ -1,0 +1,5 @@
+素材/
+.DS_Store
+_build/source_bak*/
+_build/__pycache__/
+video/*.webm

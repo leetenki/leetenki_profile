@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李天琦｜个人简介</title>
+<style>
+  :root {
+    --navy: #0f2740;
+    --navy-2: #1b3a5c;
+    --gold: #b08d3e;
+    --gold-light: #d4b46a;
+    --ink: #232a33;
+    --gray: #5f6b78;
+    --line: #dde3ea;
+    --bg: #f6f8fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.8;
+    font-size: 14.5px;
+  }
+  .sheet { max-width: 860px; margin: 0 auto; background: #fff; box-shadow: 0 0 24px rgba(15,39,64,.10); }
+
+  /* ===== Hero ===== */
+  .hero { background: linear-gradient(135deg, #0c2036 0%, #16354f 55%, #1d4266 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero::after { content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px; border:1px solid rgba(212,180,106,.25); border-radius:50%; }
+  .hero::before { content:""; position:absolute; right:-40px; top:-40px; width:340px; height:340px; border:1px solid rgba(212,180,106,.15); border-radius:50%; }
+  .hero-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; align-items: stretch; }
+  .hero-text { padding: 46px 20px 38px 46px; position: relative; z-index: 2; }
+  .hero-label { font-size: 11.5px; letter-spacing: .35em; color: var(--gold-light); font-weight: 600; margin-bottom: 18px; }
+  .hero-name { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 52px; font-weight: 600; letter-spacing: .14em; line-height: 1.15; }
+  .hero-name small { display:block; font-size: 13px; letter-spacing: .22em; color: #b8c6d4; margin-top: 10px; font-weight: 400; }
+  .hero-title { margin-top: 20px; font-size: 15px; color: #e8eef4; font-weight: 600; }
+  .hero-sub { margin-top: 6px; font-size: 12.5px; color: #a9bac9; line-height: 1.8; }
+  .hero-photo { position: relative; min-height: 300px; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-photo::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, #12304b 0%, rgba(18,48,75,0) 30%); }
+
+  /* stat chips */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--navy); border-top: 1px solid rgba(212,180,106,.35); }
+  .stat { padding: 16px 10px 18px; text-align: center; border-right: 1px solid rgba(255,255,255,.08); }
+  .stat:last-child { border-right: none; }
+  .stat .num { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 18px; color: var(--gold-light); font-weight: 600; letter-spacing: .06em; white-space: nowrap; }
+  .stat .num.sm { font-size: 14.5px; letter-spacing: .02em; line-height: 1.9; }
+  .stat .label { font-size: 10.5px; color: #9fb2c2; margin-top: 3px; letter-spacing: .06em; }
+
+  /* ===== Sections ===== */
+  .content { padding: 42px 46px 50px; }
+  section { margin-bottom: 46px; }
+  h2 { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-weight: 600; font-size: 21px; color: var(--navy); letter-spacing: .14em; display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+  h2::before { content:""; width: 30px; height: 2px; background: var(--gold); flex-shrink: 0; }
+  h2 .en { font-size: 10px; letter-spacing: .3em; color: var(--gold); font-weight: 600; margin-left: auto; }
+
+  .lead { font-size: 14.5px; line-height: 2.0; text-align: justify; }
+  .lead strong { color: var(--navy); font-weight: 700; }
+
+  /* ===== Timeline table ===== */
+  .tl { width: 100%; border-collapse: collapse; }
+  .tl td { padding: 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13.5px; }
+  .tl td.d { width: 110px; color: var(--navy); font-weight: 700; font-feature-settings: "tnum"; white-space: nowrap; }
+  .tl td.b { padding-left: 18px; position: relative; }
+  .tl td.b::before { content:""; position:absolute; left: 4px; top: 15px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+  .tl tr.hl td { background: #f9f5ec; }
+  .tl tr.hl td.b { font-weight: 600; }
+
+  /* ===== Highlight cards ===== */
+  .card { border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 4px; padding: 22px 24px 20px; margin-bottom: 22px; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+  .card-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+  .card-head .date { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--gold); font-weight: 600; font-size: 13.5px; letter-spacing: .06em; white-space: nowrap; }
+  .card-head h3 { font-size: 17px; color: var(--navy); letter-spacing: .04em; }
+  .card-body { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; align-items: start; }
+  .card-body.wide { grid-template-columns: 1fr; }
+  .card p { font-size: 13.5px; text-align: justify; margin-bottom: 8px; }
+  .card .src { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 12px; color: var(--gray); }
+  .card .src a { color: var(--navy-2); word-break: normal; overflow-wrap: break-word; text-decoration: none; border-bottom: 1px solid #c3cfda; }
+  .card .src .media-name { font-weight: 700; color: var(--ink); }
+  .imgs { display: grid; gap: 8px; }
+  .imgs img { width: 100%; display: block; border-radius: 3px; border: 1px solid var(--line); }
+  .imgs.g2 { grid-template-columns: 1fr 1fr; }
+  .imgs.ar32 img { aspect-ratio: 3 / 2; object-fit: cover; }
+  .imgs.ar97 img { aspect-ratio: 9 / 7; object-fit: cover; }
+  .imgs .span2 { grid-column: span 2; }
+  .cap { font-size: 11px; color: var(--gray); margin-top: 2px; line-height: 1.5; }
+
+  /* ===== Media list ===== */
+  .media-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .media-table th { background: var(--navy); color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; letter-spacing: .05em; }
+  .media-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .media-table td.d { white-space: nowrap; color: var(--navy); font-weight: 600; width: 84px; }
+  .media-table td.m { font-weight: 600; width: 130px; }
+  .media-table a { color: var(--navy-2); word-break: break-all; text-decoration: none; border-bottom: 1px solid #c3cfda; font-size: 11.5px; }
+
+  /* ===== Footer ===== */
+  .foot { background: var(--navy); color: #9fb2c2; text-align: center; padding: 16px; font-size: 11px; letter-spacing: .1em; }
+
+  /* ===== Print button & language switcher ===== */
+  .print-btn { position: fixed; top: 18px; right: 18px; background: var(--navy); color: #fff; border: 1px solid var(--gold); border-radius: 6px; padding: 10px 18px; font-size: 13px; cursor: pointer; box-shadow: 0 4px 14px rgba(15,39,64,.35); z-index: 99; font-family: inherit; }
+  .print-btn:hover { background: var(--navy-2); }
+  .lang { position: fixed; top: 18px; left: 18px; z-index: 99; display: flex; gap: 6px; align-items: center; }
+  .lang a { background: rgba(15,39,64,.88); color: #dfe7ee; border: 1px solid rgba(212,180,106,.5); border-radius: 6px; padding: 8px 13px; font-size: 12px; text-decoration: none; box-shadow: 0 4px 14px rgba(15,39,64,.25); }
+  .lang a:hover { background: var(--navy-2); }
+  .lang a.active { background: var(--gold); color: #0f2740; font-weight: 700; border-color: var(--gold); }
+
+  /* ===== Print ===== */
+  @page { size: A4; margin: 11mm 11mm 13mm; }
+  @media print {
+    body { background: #fff; font-size: 12.5px; }
+    .sheet { max-width: none; box-shadow: none; }
+    .print-btn, .lang { display: none; }
+    .hero-text { padding: 30px 16px 26px 34px; }
+    .hero-name { font-size: 40px; }
+    .content { padding: 26px 6px 10px; }
+    section { margin-bottom: 30px; }
+    .card { margin-bottom: 14px; padding: 16px 18px 14px; }
+    .card p { font-size: 12px; }
+    .tl td { font-size: 12px; padding: 5px 0; }
+    a { color: var(--navy-2) !important; }
+    .hero-photo { min-height: 260px; }
+  }
+  @media (max-width: 700px) {
+    .lang { position: static; padding: 10px 12px; background: linear-gradient(135deg, #0c2036 0%, #16354f 100%); }
+    .lang a { padding: 7px 10px; font-size: 11.5px; box-shadow: none; }
+    .print-btn { position: static; margin-left: auto; padding: 7px 10px; font-size: 11.5px; box-shadow: none; }
+    .hero-inner, .card-body { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .content { padding: 28px 20px 36px; }
+    .hero-text { padding: 34px 24px; }
+    .hero-name { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+<nav class="lang"><a href="./">日本語</a><a href="./en.html">EN</a><a href="./zh.html" class="active">中文</a><button class="print-btn" onclick="window.print()">🖨 打印 / 保存PDF</button></nav>
+<div class="sheet">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-label">PROFILE ─ 个人简介</div>
+        <h1 class="hero-name">李 天琦<small>LI TIANQI</small></h1>
+        <div class="hero-title">AI研究 × 房地产投资・创业者</div>
+        <div class="hero-sub">职业生涯始于DeNA的AI研究员，此后创立AI×房地产创业公司。公司加入SYLA集团后，作为公司合伙人亲历美国纳斯达克上市（2023年）与东京证券交易所上市（2025年）。</div>
+      </div>
+      <div class="hero-photo"><img src="img/p01.jpg" alt="李天琦在DeNA TechCon 2019发表演讲"></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">纳斯达克</div><div class="label">美国上市经历（2023）</div></div>
+      <div class="stat"><div class="num">东证上市</div><div class="label">SYLA HD 标准市场（2025）</div></div>
+      <div class="stat"><div class="num sm">SoftBank・DeNA</div><div class="label">获两大集团基金投资</div></div>
+      <div class="stat"><div class="num sm">日经・TBS・ABEMA</div><div class="label">多家主流媒体报道</div></div>
+    </div>
+  </header>
+
+  <div class="content">
+
+  <!-- ================= SUMMARY ================= -->
+  <section>
+    <h2>简介<span class="en">SUMMARY</span></h2>
+    <p class="lead">
+      1989年生于中国苏州，10岁随身为钢琴家的父亲移居日本。大学期间投身深度学习研究，<strong>2015年受Google Japan之邀，就基于深度强化学习的自动驾驶技术登台演讲</strong>。以第一名的成绩毕业于东京工科大学后，加入<strong>DeNA的AI研发部门</strong>，从事世界顶尖水平的视频生成AI研究。
+    </p>
+    <p class="lead" style="margin-top:10px">
+      2019年在DeNA的支持下创业，成立了运用AI分析房地产市场的<strong>株式会社DEVEL（现SYLA BRAIN）</strong>。公司先后获得SoftBank Group与DeNA旗下基金的投资，2021年与房地产科技公司SYLA达成资本合作，成为其全资子公司。此后出任<strong>SYLA Technologies执行董事兼CAIO（首席AI官）</strong>，作为公司合伙人推动了2023年的<strong>美国纳斯达克上市</strong>与2025年的<strong>SYLA HOLDINGS东证标准市场上市</strong>。东证上市后功成身退，卸任董事职务，现专注于经营自己的家族资产管理公司。同时也是一位自主研发AI房产估价系统的投资人，持续将AI×房地产的专业积累运用于资产运营。
+    </p>
+  </section>
+
+  <!-- ================= TIMELINE ================= -->
+  <section>
+    <h2>履历<span class="en">CAREER TIMELINE</span></h2>
+    <table class="tl">
+      <tr><td class="d">1989年07月</td><td class="b">生于中国苏州</td></tr>
+      <tr><td class="d">2000年01月</td><td class="b">随身为钢琴家的父亲移居日本</td></tr>
+      <tr><td class="d">2012年09月</td><td class="b">开始关注房地产领域，自主研发基于AI的房产价格分析系统</td></tr>
+      <tr><td class="d">2014年02月</td><td class="b">Microsoft Japan 实习</td></tr>
+      <tr><td class="d">2014年03月</td><td class="b">日本创业投资（NVCC）大学生黑客马拉松2014 冠军</td></tr>
+      <tr><td class="d">2015年06月</td><td class="b">受邀在Google Japan就深度强化学习自动驾驶技术登台演讲</td></tr>
+      <tr><td class="d">2016年03月</td><td class="b">以第一名的成绩毕业于东京工科大学</td></tr>
+      <tr><td class="d">2016年04月</td><td class="b">加入DeNA，在系统本部从事AI研发</td></tr>
+      <tr class="hl"><td class="d">2019年10月</td><td class="b">在DeNA支持下创业，成立株式会社DEVEL（现SYLA BRAIN）</td></tr>
+      <tr><td class="d">2020年02月</td><td class="b">获SoftBank Group全资基金与DeNA全资基金投资</td></tr>
+      <tr><td class="d">2021年10月</td><td class="b">与SYLA达成资本合作，出让股份、成为其全资子公司</td></tr>
+      <tr><td class="d">2022年08月</td><td class="b">出任SYLA Technologies执行董事兼CAIO</td></tr>
+      <tr class="hl"><td class="d">2023年03月</td><td class="b">SYLA Technologies登陆纽约纳斯达克</td></tr>
+      <tr><td class="d">2025年05月</td><td class="b">为日经BP《房地产AI成功模式》执笔「价格测算AI模式」</td></tr>
+      <tr class="hl"><td class="d">2025年06月</td><td class="b">与CUMICA完成经营整合，SYLA HOLDINGS（证券代码：8887）登陆东证标准市场</td></tr>
+    </table>
+  </section>
+
+  <!-- ================= HIGHLIGHTS ================= -->
+  <section>
+    <h2>主要成就<span class="en">HIGHLIGHTS</span></h2>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2015年6月</span><h3>Google Japan 特邀演讲 ─ 学生时代即站上AI研究前沿</h3></div>
+      <div class="card-body">
+        <div>
+          <p>大学在读期间便开始研究基于深度强化学习的自动驾驶仿真技术，并凭借这一成果受邀登上Google Japan的讲台。加上Microsoft Japan实习、日本创业投资（NVCC）大学生黑客马拉松2014夺冠等经历，学生时代便已崭露头角，最终以第一名的成绩毕业于东京工科大学。</p>
+        </div>
+        <div class="imgs">
+          <img src="img/p02.jpg" alt="在Google Japan的特邀演讲">
+          <div class="cap">在Google Japan登台演讲（2015年）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2016年–2019年</span><h3>DeNA AI研发 ─ 发表全球性能最高的视频生成AI成果</h3></div>
+      <div class="card-body">
+        <div>
+          <p>在DeNA系统本部AI研发团队从事计算机视觉方向的研发。在「DeNA TechCon 2019」上，就「帧插值（Frame Interpolation）」——自动生成视频帧与帧之间画面的技术——发表了当时全球性能最高的研究成果，获ITmedia等科技媒体报道。</p>
+          <p class="src"><span class="media-name">ITmedia NEWS</span>（2019年2月7日）：关于DeNA TechCon 2019帧插值技术发表的报道<br>
+          <a href="https://www.itmedia.co.jp/news/articles/1902/07/news095.html">itmedia.co.jp/news/articles/<wbr>1902/07/news095.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p03.jpg" alt="DeNA TechCon 2019 帧插值技术发表">
+          <div class="cap">在DeNA TechCon 2019上发表研究成果</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2019年10月</span><h3>创立株式会社DEVEL ─ 获SoftBank・DeNA两大基金投资</h3></div>
+      <div class="card-body">
+        <div>
+          <p>在DeNA的支持下创业，成立株式会社DEVEL（现SYLA BRAIN），研发运用AI对日本全网房地产数据进行解析与自动估价的系统。公司以软银集团旗下的AI专业孵化器「KERNEL HONGO」（DEEPCORE运营）为基地，并于2020年2月获得SoftBank Group全资基金与DeNA全资基金的投资。</p>
+        </div>
+        <div class="imgs g2 ar32">
+          <img src="img/p04.jpg" alt="DeNA离职欢送会">
+          <img src="img/p05.jpg" alt="KERNEL HONGO by DEEPCORE">
+          <div class="cap span2">左：离开DeNA时同事们的欢送　右：软银系AI孵化器「KERNEL HONGO」</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2020年6月</span><h3>在日本人工智能学会发表论文 ─ 当时日本最高水平的房价预测AI</h3></div>
+      <div class="card-body">
+        <div>
+          <p>构建了可高精度预测房地产价格的AI模型，并在日本人工智能学会全国大会（JSAI2020）上发表论文。通过纳入公寓品牌、地段等日本特有的价格因素，模型表现大幅超越既有研究，实现了当时日本最高水平的精度（平均误差率8.35%）。</p>
+          <p class="src"><span class="media-name">日本人工智能学会全国大会（JSAI2020）</span>（2020年6月11日）「LightGBMを用いた不動産投資における高精度価格推定モデルの構築」<br>
+          <a href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2020/0/JSAI2020_3Rin449/_article/-char/ja/" target="_blank" rel="noopener">jstage.jst.go.jp/article/pjsai/<wbr>JSAI2020/0/JSAI2020_3Rin449/</a>　<a href="papers/jsai2020_3Rin4-49.pdf" target="_blank" rel="noopener">论文PDF</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p24.jpg" alt="JSAI2020论文《LightGBMを用いた不動産投資における高精度価格推定モデルの構築》">
+          <div class="cap">摘自日本人工智能学会全国大会（JSAI2020）发表论文</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2020年</span><h3>用数据解读疫情下的楼市 ─ 受到媒体关注</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2020年疫情之下市场前景不明，作为以AI数据分析见长的房地产评论嘉宾，多次出演新闻节目ABEMA Prime，围绕「房产成交量为何居高不下」「买房还是租房」等话题进行数据化解读。</p>
+          <p>同年，Harbor Business Online刊出专题报道《连Google都认可的天才，用AI制胜房地产投资》，介绍了其运用AI筛选房源的投资方法，以及在东京都心核心地段积累的持有业绩。</p>
+          <p class="src"><span class="media-name">Harbor Business Online</span>（2020年11月19日）<br>
+          <a href="https://hbol.jp/pc/232428/2/">hbol.jp/pc/232428/2/</a></p>
+        </div>
+        <div class="imgs g2">
+          <img src="img/p06.jpg" alt="以DEVEL代表身份出演ABEMA Prime">
+          <img src="img/p07.jpg" alt="ABEMA Prime 房产成交量解读">
+          <img src="img/p08.jpg" alt="ABEMA Prime 远程出演">
+          <img src="img/p09.jpg" alt="ABEMA Prime 买房派vs租房派">
+          <div class="cap span2">出演ABEMA Prime《你想买自己的房子吗？》等节目（2020年）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2021年–2022年</span><h3>加入SYLA集团 ─ 出任执行董事兼CAIO（首席AI官）</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2021年10月，DEVEL与房地产科技公司SYLA达成资本合作，成为集团全资子公司，并更名为「SYLA BRAIN」。2022年2月，进入集团新一届经营班子出任执行董事，同年8月升任CAIO（首席AI官），统筹集团运用AI与RPA的整体技术战略。</p>
+          <p class="src"><span class="media-name">PR TIMES</span>（2022年2月3日）：《以"房地产投资民主化"为使命的SYLA集团公布新经营体制》<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000027.000050760.html">prtimes.jp/main/html/rd/p/<wbr>000000027.000050760.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p10.jpg" alt="与SYLA集团创始人杉本宏之">
+          <div class="cap">与SYLA集团创始人・杉本宏之先生</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年3月</span><h3>纳斯达克上市 ─ 以合伙人身份带领日本公司登陆美股</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2023年3月31日，SYLA Technologies在纽约纳斯达克挂牌上市（股票代码：SYT）。作为执行董事兼CAIO全程护航上市，挂牌之时更是集团第三大个人股东。日本房地产科技公司赴美上市极为罕见，日本经济新闻专题《告别IPO后进国日本——日本创业者奔赴纳斯达克》对此进行了报道。上市仪式期间，其身影还登上了纽约时代广场的纳斯达克大屏。</p>
+          <p class="src"><span class="media-name">日本经济新闻</span>（2023年6月27日）：《告别IPO后进国日本——日本创业者奔赴纳斯达克》<br>
+          <a href="https://www.nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/">nikkei.com/article/<wbr>DGXZQOUB194UK0Z10C23A6000000/</a></p>
+        </div>
+        <div class="imgs g2 ar97">
+          <img src="img/p11.jpg" alt="纳斯达克上市仪式">
+          <img src="img/p12.jpg" alt="时代广场纳斯达克大屏">
+          <img src="img/p13.jpg" alt="纳斯达克上市仪式合影">
+          <img src="img/p14.jpg" alt="纳斯达克上市纪念牌">
+          <div class="cap span2">纳斯达克MarketSite上市仪式・时代广场大屏・上市纪念牌（2023年3月31日）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年</span><h3>TBS《news23》─ 房地产行业ChatGPT应用的先行者</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2023年生成式AI浪潮初起，TBS王牌新闻节目《news23》专题报道了由其主导开发的公司内部AI平台「GOD-GPT」：从自动撰写房源文案，到用英文对接海外投资者，作为房地产×生成式AI的先行案例在全国电视节目中播出。</p>
+          <p class="src"><span class="media-name">TBS news23</span>（2023年）专题采访<br>
+          <a href="https://youtu.be/5dfu0bnIThw">youtu.be/5dfu0bnIThw</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p15.jpg" alt="TBS news23 采访">
+          <img src="img/p16.jpg" alt="GOD-GPT 界面">
+          <div class="cap">TBS《news23》画面。自研AI平台「GOD-GPT」</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年6月</span><h3>参与创立日本图像生成AI联盟（JIGAC）</h3></div>
+      <div class="card-body">
+        <div>
+          <p>以AI开发企业代表的身份，参与创立行业组织「日本图像生成AI联盟（JIGAC）」——旨在厘清图像生成AI训练所涉及的法律与伦理问题——并出席成立发布会，与东京大学教授、知名律师等共同参与日本生成式AI行业的规则建设。联盟成立获日本经济新闻报道。</p>
+          <p class="src"><span class="media-name">日本经济新闻</span>（2023年6月20日）：《完善图像生成AI训练环境　行业联盟成立》<br>
+          <a href="https://www.nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/">nikkei.com/article/<wbr>DGXZQOUC204R70Q3A620C2000000/</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p17.jpg" alt="JIGAC成立发布会">
+          <div class="cap">JIGAC成立发布会现场（2023年6月）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年</span><h3>做客ABEMA Prime演播室 ─ 解读东京楼市与AI变革</h3></div>
+      <div class="card-body">
+        <div>
+          <p>以「SYLA Technologies执行董事／用AI分析房地产数据、精通华人投资动向」的专家身份做客ABEMA Prime演播室，解读日元贬值背景下海外投资者眼中的东京楼市，以及AI将如何改造这个极度传统的行业。</p>
+          <p class="src"><span class="media-name">ABEMA Prime</span>（2023年5月1日）：《房价飙升：新建公寓还会涨到多高？海外投资者为何仍觉划算？》等多期节目<br>
+          <a href="https://youtu.be/IACYugVFkCc">youtu.be/IACYugVFkCc</a></p>
+        </div>
+        <div class="imgs g2">
+          <img src="img/p18.jpg" alt="ABEMA Prime 演播室出演">
+          <img src="img/p19.jpg" alt="ABEMA Prime 东京楼市解读">
+          <img src="img/p20.jpg" alt="ABEMA Prime 演播室全景">
+          <img src="img/p21.jpg" alt="ABEMA Prime 土地价值解读">
+          <div class="cap span2">出演ABEMA Prime《海外投资者眼中的日本住宅》《买房还是租房？》等节目</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2025年4月</span><h3>出演乐待频道 ─ 与安野贵博对谈AI×房地产</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2025年4月，出演日本房地产投资平台「乐待（Rakumachi）」YouTube频道的对谈节目「AI技术×房地产行业的未来」，与AI工程师、企业家、科幻作家安野贵博，以及房地产顾问长岛修（樱事务所会长）一同探讨AI将如何改变房地产交易。</p>
+          <p>节目中介绍了其亲自开发、并实际用于购房投资的房地产投资AI「GOD AI」，讲解了自动收集门户网站每日海量房源、由AI评估折价程度与收益率并筛选优质物件的方法。同时指出，卖方情况、法规限制等数据无法体现的因素仍离不开人的判断，并展望外观设计等感性价值今后也将被纳入AI的判断之中。</p>
+          <p class="src"><span class="media-name">乐待 RAKUMACHI</span>（2025年4月20日）：《安野贵博vs房地产行业：AI革命能否改变超传统行业？》<br>
+          <a href="https://youtu.be/D5KXi3YbLIs">youtu.be/D5KXi3YbLIs</a></p>
+        </div>
+        <div class="imgs">
+          <div class="cap">在乐待频道与安野贵博、长岛修对谈（2025年4月）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2025年5月</span><h3>参与撰写《房地产AI成功模式》（日经BP出版）</h3></div>
+      <div class="card-body">
+        <div>
+          <p>在一般社团法人不动产建设数据活用推进协会（PCDUA）编著的行业AI落地实务指南《房地产AI成功模式》（日经BP出版，2025年5月26日发售）中，执笔「价格测算AI模式」，将自学生时代起持续研发与实战的房产估价AI经验，沉淀为可供行业复用的实施范式。</p>
+          <p class="src"><span class="media-name">PR TIMES</span>（2025年5月19日）：《〈房地产AI成功模式〉出版发行》<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000003.000120682.html">prtimes.jp/main/html/rd/p/<wbr>000000003.000120682.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p22.jpg" alt="《房地产AI成功模式》出版通知">
+          <div class="cap">《房地产AI成功模式》（日经BP・2025年5月26日发售）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2025年6月</span><h3>东证标准市场上市 ─ SYLA HOLDINGS（证券代码：8887）</h3></div>
+      <div class="card-body">
+        <div>
+          <p>通过与东证标准市场上市公司CUMICA（证券代码：8887）的经营整合，CUMICA更名为「株式会社SYLA HOLDINGS」，SYLA集团就此完成东京证券交易所标准市场上市。</p>
+          <p>李天琦将一手创办的公司培育为上市集团的核心AI企业（SYLA BRAIN），从出让股权完成EXIT，到纳斯达克、东证两地上市全程亲历，功成身退、卸任董事。现专注于经营自己的家族资产管理公司，将AI×房地产的专业积累投入房产资产运营。</p>
+          <p class="src"><span class="media-name">PR TIMES</span>（2025年6月2日）：《CUMICA更名为SYLA HOLDINGS》<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000006.000143674.html">prtimes.jp/main/html/rd/p/<wbr>000000006.000143674.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p23.jpg" alt="SYLA HOLDINGS（标准市场：8887）业绩说明资料">
+          <div class="cap">SYLA HOLDINGS（原CUMICA・标准市场：8887）业绩说明资料</div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ================= MEDIA LIST ================= -->
+  <section>
+    <h2>媒体报道一览<span class="en">MEDIA</span></h2>
+    <table class="media-table">
+      <tr><th>时间</th><th>媒体</th><th>内容</th></tr>
+      <tr><td class="d">2019年2月</td><td class="m">ITmedia NEWS</td><td>DeNA TechCon 2019 帧插值技术发表<br><a href="https://www.itmedia.co.jp/news/articles/1902/07/news095.html">itmedia.co.jp/news/articles/1902/07/news095.html</a></td></tr>
+      <tr><td class="d">2020年</td><td class="m">ABEMA Prime</td><td>疫情下的房地产市场解读（多次出演）</td></tr>
+      <tr><td class="d">2020年11月</td><td class="m">Harbor Business Online</td><td>《连Google都认可的天才，用AI制胜房地产投资》<br><a href="https://hbol.jp/pc/232428/2/">hbol.jp/pc/232428/2/</a></td></tr>
+      <tr><td class="d">2022年2月</td><td class="m">PR TIMES</td><td>SYLA集团新经营体制（出任执行董事）<br><a href="https://prtimes.jp/main/html/rd/p/000000027.000050760.html">prtimes.jp/main/html/rd/p/000000027.000050760.html</a></td></tr>
+      <tr><td class="d">2023年</td><td class="m">TBS news23</td><td>房地产行业ChatGPT应用专题采访<br><a href="https://youtu.be/5dfu0bnIThw">youtu.be/5dfu0bnIThw</a></td></tr>
+      <tr><td class="d">2023年6月</td><td class="m">日本经济新闻</td><td>《完善图像生成AI训练环境　行业联盟成立》（JIGAC）<br><a href="https://www.nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/">nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/</a></td></tr>
+      <tr><td class="d">2023年6月</td><td class="m">日本经济新闻</td><td>《告别IPO后进国日本——日本创业者奔赴纳斯达克》<br><a href="https://www.nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/">nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/</a></td></tr>
+      <tr><td class="d">2023年</td><td class="m">ABEMA Prime</td><td>《新建公寓还会涨到多高？》等演播室节目<br><a href="https://youtu.be/IACYugVFkCc">youtu.be/IACYugVFkCc</a></td></tr>
+      <tr><td class="d">2025年4月</td><td class="m">乐待频道（YouTube）</td><td>与安野贵博对谈AI×房地产<br><a href="https://youtu.be/D5KXi3YbLIs">youtu.be/D5KXi3YbLIs</a></td></tr>
+      <tr><td class="d">2025年5月</td><td class="m">日经BP（著作）</td><td>在《房地产AI成功模式》中执笔「价格测算AI模式」<br><a href="https://prtimes.jp/main/html/rd/p/000000003.000120682.html">prtimes.jp/main/html/rd/p/000000003.000120682.html</a></td></tr>
+      <tr><td class="d">2025年6月</td><td class="m">PR TIMES</td><td>《CUMICA更名为SYLA HOLDINGS》（东证标准市场：8887）<br><a href="https://prtimes.jp/main/html/rd/p/000000006.000143674.html">prtimes.jp/main/html/rd/p/000000006.000143674.html</a></td></tr>
+    </table>
+  </section>
+
+  </div><!-- /content -->
+
+  <footer class="foot">李天琦 ─ PROFILE ｜ 2026</footer>
+</div>
+</body>
+</html>

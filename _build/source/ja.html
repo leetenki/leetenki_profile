@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李 天琦｜プロフィール</title>
+<style>
+  :root {
+    --navy: #0f2740;
+    --navy-2: #1b3a5c;
+    --gold: #b08d3e;
+    --gold-light: #d4b46a;
+    --ink: #232a33;
+    --gray: #5f6b78;
+    --line: #dde3ea;
+    --bg: #f6f8fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.75;
+    font-size: 14.5px;
+  }
+  .sheet { max-width: 860px; margin: 0 auto; background: #fff; box-shadow: 0 0 24px rgba(15,39,64,.10); }
+
+  /* ===== Hero ===== */
+  .hero { background: linear-gradient(135deg, #0c2036 0%, #16354f 55%, #1d4266 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero::after { content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px; border:1px solid rgba(212,180,106,.25); border-radius:50%; }
+  .hero::before { content:""; position:absolute; right:-40px; top:-40px; width:340px; height:340px; border:1px solid rgba(212,180,106,.15); border-radius:50%; }
+  .hero-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; align-items: stretch; }
+  .hero-text { padding: 46px 20px 38px 46px; position: relative; z-index: 2; }
+  .hero-label { font-size: 11.5px; letter-spacing: .35em; color: var(--gold-light); font-weight: 600; margin-bottom: 18px; }
+  .hero-name { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif; font-size: 52px; font-weight: 600; letter-spacing: .14em; line-height: 1.15; }
+  .hero-name small { display:block; font-family: "Hiragino Kaku Gothic ProN", sans-serif; font-size: 13px; letter-spacing: .22em; color: #b8c6d4; margin-top: 10px; font-weight: 400; }
+  .hero-title { margin-top: 20px; font-size: 15px; color: #e8eef4; font-weight: 600; }
+  .hero-sub { margin-top: 6px; font-size: 12.5px; color: #a9bac9; line-height: 1.8; }
+  .hero-photo { position: relative; min-height: 300px; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-photo::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, #12304b 0%, rgba(18,48,75,0) 30%); }
+
+  /* stat chips */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--navy); border-top: 1px solid rgba(212,180,106,.35); }
+  .stat { padding: 16px 10px 18px; text-align: center; border-right: 1px solid rgba(255,255,255,.08); }
+  .stat:last-child { border-right: none; }
+  .stat .num { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif; font-size: 18px; color: var(--gold-light); font-weight: 600; letter-spacing: .06em; white-space: nowrap; }
+  .stat .num.sm { font-size: 14.5px; letter-spacing: .02em; line-height: 1.9; }
+  .stat .label { font-size: 10.5px; color: #9fb2c2; margin-top: 3px; letter-spacing: .06em; }
+
+  /* ===== Sections ===== */
+  .content { padding: 42px 46px 50px; }
+  section { margin-bottom: 46px; }
+  h2 { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif; font-weight: 600; font-size: 21px; color: var(--navy); letter-spacing: .14em; display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+  h2::before { content:""; width: 30px; height: 2px; background: var(--gold); flex-shrink: 0; }
+  h2 .en { font-family: "Hiragino Kaku Gothic ProN", sans-serif; font-size: 10px; letter-spacing: .3em; color: var(--gold); font-weight: 600; margin-left: auto; }
+
+  .lead { font-size: 14.5px; line-height: 2.0; text-align: justify; }
+  .lead strong { color: var(--navy); font-weight: 700; }
+
+  /* ===== Timeline table ===== */
+  .tl { width: 100%; border-collapse: collapse; }
+  .tl td { padding: 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13.5px; }
+  .tl td.d { width: 110px; color: var(--navy); font-weight: 700; font-feature-settings: "tnum"; white-space: nowrap; }
+  .tl td.b { padding-left: 18px; position: relative; }
+  .tl td.b::before { content:""; position:absolute; left: 4px; top: 15px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+  .tl tr.hl td { background: #f9f5ec; }
+  .tl tr.hl td.b { font-weight: 600; }
+
+  /* ===== Highlight cards ===== */
+  .card { border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 4px; padding: 22px 24px 20px; margin-bottom: 22px; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+  .card-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+  .card-head .date { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif; color: var(--gold); font-weight: 600; font-size: 13.5px; letter-spacing: .06em; white-space: nowrap; }
+  .card-head h3 { font-size: 17px; color: var(--navy); letter-spacing: .04em; }
+  .card-body { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; align-items: start; }
+  .card-body.wide { grid-template-columns: 1fr; }
+  .card p { font-size: 13.5px; text-align: justify; margin-bottom: 8px; }
+  .card .src { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 12px; color: var(--gray); }
+  .card .src a { color: var(--navy-2); word-break: normal; overflow-wrap: break-word; text-decoration: none; border-bottom: 1px solid #c3cfda; }
+  .card .src .media-name { font-weight: 700; color: var(--ink); }
+  .imgs { display: grid; gap: 8px; }
+  .imgs img { width: 100%; display: block; border-radius: 3px; border: 1px solid var(--line); }
+  .imgs.g2 { grid-template-columns: 1fr 1fr; }
+  .imgs.ar32 img { aspect-ratio: 3 / 2; object-fit: cover; }
+  .imgs.ar97 img { aspect-ratio: 9 / 7; object-fit: cover; }
+  .imgs .span2 { grid-column: span 2; }
+  .cap { font-size: 11px; color: var(--gray); margin-top: 2px; line-height: 1.5; }
+
+  /* ===== Media list ===== */
+  .media-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .media-table th { background: var(--navy); color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; letter-spacing: .05em; }
+  .media-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .media-table td.d { white-space: nowrap; color: var(--navy); font-weight: 600; width: 84px; }
+  .media-table td.m { font-weight: 600; width: 130px; }
+  .media-table a { color: var(--navy-2); word-break: break-all; text-decoration: none; border-bottom: 1px solid #c3cfda; font-size: 11.5px; }
+
+  /* ===== Footer ===== */
+  .foot { background: var(--navy); color: #9fb2c2; text-align: center; padding: 16px; font-size: 11px; letter-spacing: .1em; }
+
+  /* ===== Print button ===== */
+  .print-btn { position: fixed; top: 18px; right: 18px; background: var(--navy); color: #fff; border: 1px solid var(--gold); border-radius: 6px; padding: 10px 18px; font-size: 13px; cursor: pointer; box-shadow: 0 4px 14px rgba(15,39,64,.35); z-index: 99; font-family: inherit; }
+  .print-btn:hover { background: var(--navy-2); }
+  .lang { position: fixed; top: 18px; left: 18px; z-index: 99; display: flex; gap: 6px; align-items: center; }
+  .lang a { background: rgba(15,39,64,.88); color: #dfe7ee; border: 1px solid rgba(212,180,106,.5); border-radius: 6px; padding: 8px 13px; font-size: 12px; text-decoration: none; box-shadow: 0 4px 14px rgba(15,39,64,.25); }
+  .lang a:hover { background: var(--navy-2); }
+  .lang a.active { background: var(--gold); color: #0f2740; font-weight: 700; border-color: var(--gold); }
+
+  /* ===== Print ===== */
+  @page { size: A4; margin: 11mm 11mm 13mm; }
+  @media print {
+    body { background: #fff; font-size: 12.5px; }
+    .sheet { max-width: none; box-shadow: none; }
+    .print-btn, .lang { display: none; }
+    .hero-text { padding: 30px 16px 26px 34px; }
+    .hero-name { font-size: 40px; }
+    .content { padding: 26px 6px 10px; }
+    section { margin-bottom: 30px; }
+    .card { margin-bottom: 14px; padding: 16px 18px 14px; }
+    .card p { font-size: 12px; }
+    .tl td { font-size: 12px; padding: 5px 0; }
+    a { color: var(--navy-2) !important; }
+    section.pb { break-before: page; page-break-before: always; }
+    .hero-photo { min-height: 260px; }
+  }
+  @media (max-width: 700px) {
+    .lang { position: static; padding: 10px 12px; background: linear-gradient(135deg, #0c2036 0%, #16354f 100%); }
+    .lang a { padding: 7px 10px; font-size: 11.5px; box-shadow: none; }
+    .print-btn { position: static; margin-left: auto; padding: 7px 10px; font-size: 11.5px; box-shadow: none; }
+    .hero-inner, .card-body { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .content { padding: 28px 20px 36px; }
+    .hero-text { padding: 34px 24px; }
+    .hero-name { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+<nav class="lang"><a href="./" class="active">日本語</a><a href="./en.html">EN</a><a href="./zh.html">中文</a><button class="print-btn" onclick="window.print()">🖨 印刷 / PDF保存</button></nav>
+<div class="sheet">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-label">PROFILE ─ 代表者紹介</div>
+        <h1 class="hero-name">李 天琦<small>LI TIANQI</small></h1>
+        <div class="hero-title">AI研究者 × 不動産投資家・起業家</div>
+        <div class="hero-sub">DeNAのAI研究者としてキャリアをスタートし、AI×不動産のスタートアップを創業。創業した会社はシーラグループに参画し、経営陣の一員として米NASDAQ上場（2023年）・東証上場（2025年）を経験。</div>
+      </div>
+      <div class="hero-photo"><img src="img/p01.jpg" alt="李天琦 DeNA TechCon 2019 登壇"></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">NASDAQ</div><div class="label">米国市場上場を経験（2023）</div></div>
+      <div class="stat"><div class="num">東証上場</div><div class="label">シーラHD スタンダード（2025）</div></div>
+      <div class="stat"><div class="num sm">SoftBank・DeNA</div><div class="label">両グループのファンドから調達</div></div>
+      <div class="stat"><div class="num sm">日経・TBS・ABEMA</div><div class="label">メディア掲載・出演多数</div></div>
+    </div>
+  </header>
+
+  <div class="content">
+
+  <!-- ================= SUMMARY ================= -->
+  <section>
+    <h2>概要<span class="en">SUMMARY</span></h2>
+    <p class="lead">
+      1989年中国・蘇州生まれ。ピアニストの父とともに10歳で来日。大学時代から深層学習の研究に取り組み、<strong>2015年にはGoogle Japanに招かれ、深層強化学習を用いた自動運転技術について講演</strong>。東京工科大学を首席で卒業後、<strong>DeNAのAI研究開発部門</strong>にて世界最高水準の動画生成AI技術の研究に従事した。
+    </p>
+    <p class="lead" style="margin-top:10px">
+      2019年、DeNAの支援を受けて独立し、AIで不動産市場を分析する<strong>株式会社DEVEL（現シーラブレイン）を創業</strong>。SoftBank Group、DeNA両ファンドからの資金調達を経て、2021年に不動産テックのシーラと資本提携（完全子会社化）。<strong>シーラテクノロジーズ執行役員CAIO（Chief AI Officer）</strong>として、2023年の<strong>米NASDAQ上場</strong>、2025年の<strong>シーラホールディングス東証スタンダード上場</strong>を経営陣として牽引した。東証上場を区切りに役員を退任し、現在は家族資産管理法人の経営に専念。AIを用いた不動産価格分析システムを自ら開発・運用する投資家でもあり、AI×不動産の知見を活かした不動産資産運用を行っている。
+    </p>
+  </section>
+
+  <!-- ================= TIMELINE ================= -->
+  <section>
+    <h2>経歴<span class="en">CAREER TIMELINE</span></h2>
+    <table class="tl">
+      <tr><td class="d">1989年07月</td><td class="b">中国蘇州市生まれ</td></tr>
+      <tr><td class="d">2000年01月</td><td class="b">ピアニストの父に連れられ来日</td></tr>
+      <tr><td class="d">2012年09月</td><td class="b">不動産領域に興味を持ち、AIを用いた独自の価格分析システムを開発</td></tr>
+      <tr><td class="d">2014年02月</td><td class="b">Microsoft Japan インターンシップ</td></tr>
+      <tr><td class="d">2014年03月</td><td class="b">日本ベンチャーキャピタル 大学ハッカソン2014 優勝</td></tr>
+      <tr><td class="d">2015年06月</td><td class="b">Google Japanにて深層強化学習を用いた自動運転技術について招待講演</td></tr>
+      <tr><td class="d">2016年03月</td><td class="b">東京工科大学を首席で卒業</td></tr>
+      <tr><td class="d">2016年04月</td><td class="b">DeNA入社　システム本部にてAI研究開発に従事</td></tr>
+      <tr class="hl"><td class="d">2019年10月</td><td class="b">DeNAの支援を受けて独立、株式会社DEVEL（現シーラブレイン）を創業</td></tr>
+      <tr><td class="d">2020年02月</td><td class="b">SoftBank Group 100%ファンド、DeNA 100%ファンドから資金調達</td></tr>
+      <tr><td class="d">2021年10月</td><td class="b">シーラと資本提携により株式売却・完全子会社化</td></tr>
+      <tr><td class="d">2022年08月</td><td class="b">シーラテクノロジーズ執行役員CAIO就任</td></tr>
+      <tr class="hl"><td class="d">2023年03月</td><td class="b">シーラテクノロジーズ　ニューヨークNASDAQ市場上場</td></tr>
+      <tr><td class="d">2025年05月</td><td class="b">日経BP刊『不動産AI成功パターン』にて「価格算出AIパターン」を執筆</td></tr>
+      <tr class="hl"><td class="d">2025年06月</td><td class="b">クミカと経営統合により、シーラホールディングス（証券コード：8887）の東証スタンダード市場上場</td></tr>
+    </table>
+  </section>
+
+  <!-- ================= HIGHLIGHTS ================= -->
+  <section>
+    <h2>実績ハイライト<span class="en">HIGHLIGHTS</span></h2>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2015年6月</span><h3>Google Japan 招待講演 ─ 学生時代からAI研究の最前線に</h3></div>
+      <div class="card-body">
+        <div>
+          <p>大学在学中より深層強化学習を用いた自動運転シミュレーション技術を研究。その成果が評価され、Google Japanに招かれて講演を行った。Microsoft Japanでのインターンシップ、日本ベンチャーキャピタル主催の大学ハッカソン2014優勝など、学生時代から技術力で頭角を現し、東京工科大学を首席で卒業。</p>
+        </div>
+        <div class="imgs">
+          <img src="img/p02.jpg" alt="Google Japanでの招待講演">
+          <div class="cap">Google Japanでの招待講演（2015年）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2016年–2019年</span><h3>DeNA AI研究開発 ─ 世界最高水準の動画生成AI技術を発表</h3></div>
+      <div class="card-body">
+        <div>
+          <p>DeNAシステム本部AI研究開発グループにて、コンピュータビジョン領域の研究開発に従事。「DeNA TechCon 2019」では、動画のコマとコマの間を自動生成する「フレーム補間（Frame Interpolation）」技術について、当時世界最高性能の研究成果を発表し、ITmediaなど技術メディアに取り上げられた。</p>
+          <p class="src"><span class="media-name">ITmedia NEWS</span>（2019年2月7日）「アニメ制作にAIで時間短縮 ─ フレーム補間の仕組みとDeNAの取り組み」<br>
+          <a href="https://www.itmedia.co.jp/news/articles/1902/07/news095.html">itmedia.co.jp/news/articles/<wbr>1902/07/news095.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p03.jpg" alt="DeNA TechCon 2019 フレーム補間技術の発表">
+          <div class="cap">DeNA TechCon 2019での技術発表</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2019年10月</span><h3>株式会社DEVEL創業 ─ SoftBank・DeNA両ファンドが出資</h3></div>
+      <div class="card-body">
+        <div>
+          <p>DeNAの支援を受けて独立し、日本のオンライン上に存在するあらゆる不動産データをAIで解析・価格査定するシステムを開発する株式会社DEVEL（現シーラブレイン）を創業。ソフトバンクグループのAI特化型インキュベーション施設「KERNEL HONGO」（DEEPCORE運営）を拠点に開発を進め、2020年2月にはSoftBank Group 100%ファンドとDeNA 100%ファンドから資金調達を実施した。</p>
+        </div>
+        <div class="imgs g2 ar32">
+          <img src="img/p04.jpg" alt="DeNA卒業時の送別会">
+          <img src="img/p05.jpg" alt="KERNEL HONGO by DEEPCORE">
+          <div class="cap span2">左：DeNA卒業時、同僚たちからの送別　右：ソフトバンク系AIインキュベーション「KERNEL HONGO」にて</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2020年6月</span><h3>人工知能学会で論文発表 ─ 当時日本最高水準の不動産価格推定AI</h3></div>
+      <div class="card-body">
+        <div>
+          <p>不動産価格を高精度に推定するAIモデルを構築し、人工知能学会全国大会（JSAI2020）で論文発表。マンションブランドや立地といった日本特有の価格要因を組み込むことで、先行研究を大きく上回る、当時日本最高水準の精度（平均誤差率8.35%）を実現した。</p>
+          <p class="src"><span class="media-name">人工知能学会 全国大会（JSAI2020）</span>（2020年6月11日）「LightGBMを用いた不動産投資における高精度価格推定モデルの構築」<br>
+          <a href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2020/0/JSAI2020_3Rin449/_article/-char/ja/" target="_blank" rel="noopener">jstage.jst.go.jp/article/pjsai/<wbr>JSAI2020/0/JSAI2020_3Rin449/</a>　<a href="papers/jsai2020_3Rin4-49.pdf" target="_blank" rel="noopener">論文PDF</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p24.jpg" alt="JSAI2020 論文「LightGBMを用いた不動産投資における高精度価格推定モデルの構築」">
+          <div class="cap">人工知能学会全国大会（JSAI2020）発表論文より</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2020年</span><h3>コロナ禍の不動産市況をデータで解説 ─ メディアが注目</h3></div>
+      <div class="card-body">
+        <div>
+          <p>コロナ禍で先行き不透明だった2020年、AIデータ分析に基づく不動産市況解説者としてABEMA Prime（アベプラ）に複数回出演。「不動産取引量が下がらない理由」「購入派vs賃貸派」などのテーマで、データドリブンな市場分析を展開した。</p>
+          <p>同年、ハーバー・ビジネス・オンラインの特集記事「Googleも認めた天才が導き出した戦略。AIで勝つ不動産投資」では、AIによる物件スクリーニングを駆使した自身の投資手法と、都心一等地を中心とした保有物件・家賃収入の実績が紹介された。</p>
+          <p class="src"><span class="media-name">ハーバー・ビジネス・オンライン</span>（2020年11月19日）<br>
+          <a href="https://hbol.jp/pc/232428/2/">hbol.jp/pc/232428/2/</a></p>
+        </div>
+        <div class="imgs g2">
+          <img src="img/p06.jpg" alt="ABEMA Prime出演 DEVEL代表として">
+          <img src="img/p07.jpg" alt="ABEMA Prime 不動産取引量の解説">
+          <img src="img/p08.jpg" alt="ABEMA Prime リモート出演">
+          <img src="img/p09.jpg" alt="ABEMA Prime 購入派vs賃貸派">
+          <div class="cap span2">ABEMA Prime「アナタはマイホーム買いたいですか？」ほかに出演（2020年）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2021年–2022年</span><h3>シーラグループ参画 ─ 執行役員CAIO（Chief AI Officer）就任</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2021年10月、不動産テックのシーラと資本提携し、DEVELはシーラグループの完全子会社となり、社名を「SYLA BRAIN（シーラブレイン）」に変更。2022年2月発表のグループ新経営体制で執行役員に就任し、同年8月にはCAIO（Chief AI Officer）として、AI・RPAを駆使したグループ全体のテクノロジー戦略を統括した。</p>
+          <p class="src"><span class="media-name">PR TIMES</span>（2022年2月3日）「"不動産投資の民主化"を目指すシーラグループ、新経営体制発足のお知らせ」<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000027.000050760.html">prtimes.jp/main/html/rd/p/<wbr>000000027.000050760.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p10.jpg" alt="シーラホールディングス 杉本宏之会長と">
+          <div class="cap">シーラグループ創業者・杉本宏之氏と</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年3月</span><h3>米NASDAQ上場 ─ 経営陣として日本企業の米国上場を実現</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2023年3月31日、シーラテクノロジーズはニューヨークNASDAQ市場に上場（ティッカー：SYT）。執行役員CAIOとして上場を支え、上場時点ではシーラグループの個人株主第3位の大株主でもあった。日本の不動産テック企業による米国上場は極めて稀な事例であり、日本経済新聞の特集「さらばIPO後進国ニッポン　国内起業家、米ナスダックへ」でも取り上げられた。上場セレモニーではニューヨーク・タイムズスクエアのNASDAQビジョンにも登場。</p>
+          <p class="src"><span class="media-name">日本経済新聞</span>（2023年6月27日）「さらばIPO後進国ニッポン　国内起業家、米ナスダックへ」<br>
+          <a href="https://www.nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/">nikkei.com/article/<wbr>DGXZQOUB194UK0Z10C23A6000000/</a></p>
+        </div>
+        <div class="imgs g2 ar97">
+          <img src="img/p11.jpg" alt="NASDAQ上場セレモニー">
+          <img src="img/p12.jpg" alt="タイムズスクエアのNASDAQビジョン">
+          <img src="img/p13.jpg" alt="NASDAQ上場セレモニー全体写真">
+          <img src="img/p14.jpg" alt="NASDAQ上場記念盾">
+          <div class="cap span2">NASDAQ MarketSiteでの上場セレモニー・タイムズスクエアの大型ビジョン・上場記念盾（2023年3月31日）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年</span><h3>TBS「news23」─ 不動産業界のChatGPT活用最前線として取材</h3></div>
+      <div class="card-body">
+        <div>
+          <p>生成AIブーム黎明期の2023年、TBS「news23」のChatGPT活用特集にて、自ら開発を主導した社内AI基盤「GOD-GPT」による不動産業務の効率化事例が取材された。物件紹介文の自動生成や英語での海外投資家対応など、不動産×生成AIの先進事例として全国放送で紹介された。</p>
+          <p class="src"><span class="media-name">TBS news23</span>（2023年）取材VTR<br>
+          <a href="https://youtu.be/5dfu0bnIThw">youtu.be/5dfu0bnIThw</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p15.jpg" alt="TBS news23 取材">
+          <img src="img/p16.jpg" alt="GOD-GPT 画面">
+          <div class="cap">TBS「news23」より。自社開発AI基盤「GOD-GPT」</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年6月</span><h3>日本画像生成AIコンソーシアム（JIGAC）設立に参画</h3></div>
+      <div class="card-body">
+        <div>
+          <p>画像生成AIの学習をめぐる法的・倫理的課題を整理する業界団体「日本画像生成AIコンソーシアム（JIGAC）」の設立に、AI開発企業の立場から参画し、設立発表会に登壇。東京大学教授や著名弁護士らとともに、日本の生成AI業界のルール形成に携わった。設立は日本経済新聞でも報じられた。</p>
+          <p class="src"><span class="media-name">日本経済新聞</span>（2023年6月20日）「画像生成AIの学習環境整備へ　コンソーシアム設立」<br>
+          <a href="https://www.nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/">nikkei.com/article/<wbr>DGXZQOUC204R70Q3A620C2000000/</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p17.jpg" alt="JIGAC設立発表会">
+          <div class="cap">JIGAC設立発表会にて（2023年6月）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023年</span><h3>ABEMA Prime スタジオ出演 ─ 東京不動産市場・AI活用を解説</h3></div>
+      <div class="card-body">
+        <div>
+          <p>「シーラテクノロジーズ執行役員／不動産データをAI分析、中国人の投資事情に精通」の専門家としてABEMA Primeにスタジオ出演。円安下で海外投資家が東京の不動産市場をどう見ているか、AIは超アナログな不動産業界をどう変えるか、といったテーマで解説を行った。</p>
+          <p class="src"><span class="media-name">ABEMA Prime</span>（2023年5月1日）「【不動産高騰】庶民には無理？新築マンションはどこまで上がる？海外投資家にとっては割安感も？」ほか<br>
+          <a href="https://youtu.be/IACYugVFkCc">youtu.be/IACYugVFkCc</a></p>
+        </div>
+        <div class="imgs g2">
+          <img src="img/p18.jpg" alt="ABEMA Prime スタジオ出演">
+          <img src="img/p19.jpg" alt="ABEMA Prime 東京の不動産解説">
+          <img src="img/p20.jpg" alt="ABEMA Prime スタジオ全景">
+          <img src="img/p21.jpg" alt="ABEMA Prime 土地の価値解説">
+          <div class="cap span2">ABEMA Prime「海外投資家が見る日本の住宅」「持ち家？賃貸？」等に出演</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2025年4月</span><h3>楽待チャンネル出演 ─ 安野貴博氏とAI×不動産を語る</h3></div>
+      <div class="card-body">
+        <div>
+          <p>2025年4月、不動産投資サイト「楽待」のYouTubeチャンネルのトーク企画「AI技術×不動産業界の未来」に出演し、AIエンジニア・起業家・SF作家の安野貴博氏、不動産コンサルタントの長嶋修氏（さくら事務所会長）とともに、AIが不動産取引をどう変えるのかを議論した。</p>
+          <p>番組では、自ら開発し、実際の物件購入にも活用してきた不動産投資AI「GOD AI」を紹介。ポータルに日々掲載される膨大な物件情報を自動で収集し、割安度や利回りをAIが評価して有望な物件を抽出する手法を解説した。あわせて、売主の事情や法令上の制限などデータに表れない要素には人間の判断が欠かせないことや、外観デザインのような感性的な価値も今後はAIの判断に取り込まれていくとの見通しを示した。</p>
+          <p class="src"><span class="media-name">楽待 RAKUMACHI</span>（2025年4月20日）「【安野貴博vs不動産業界】AI革命で「戦前生まれ」牛耳る超アナログ業界は変わる？ どれだけAIが発展しても変わらないものは？」<br>
+          <a href="https://youtu.be/D5KXi3YbLIs">youtu.be/D5KXi3YbLIs</a></p>
+        </div>
+        <div class="imgs">
+          <div class="cap">楽待チャンネルにて安野貴博氏・長嶋修氏と対談（2025年4月）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2025年5月</span><h3>書籍『不動産AI成功パターン』（日経BP）を執筆</h3></div>
+      <div class="card-body">
+        <div>
+          <p>一般社団法人不動産建設データ活用推進協会（PCDUA）による不動産業界向けAI実装の実務ガイド『不動産AI成功パターン』（日経BP刊、2025年5月26日発売）にて、「価格算出AIパターン」を執筆。学生時代から自ら開発・運用してきた不動産価格算出AIの知見を、業界の実装パターンとして体系化した。</p>
+          <p class="src"><span class="media-name">PR TIMES</span>（2025年5月19日）「書籍『不動産AI成功パターン』発刊のお知らせ」<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000003.000120682.html">prtimes.jp/main/html/rd/p/<wbr>000000003.000120682.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p22.jpg" alt="書籍『不動産AI成功パターン』発刊のお知らせ">
+          <div class="cap">『不動産AI成功パターン』（日経BP・2025年5月26日発売）</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2025年6月</span><h3>東証スタンダード上場 ─ シーラホールディングス（証券コード：8887）</h3></div>
+      <div class="card-body">
+        <div>
+          <p>東証スタンダード上場の株式会社クミカ（証券コード：8887）との経営統合により、クミカは「株式会社シーラホールディングス」に商号変更。実質的にシーラグループの東証スタンダード上場が実現した。</p>
+          <p>自ら創業した会社を上場グループの中核AI企業（シーラブレイン）へと育て上げ、株式売却によるEXITから米NASDAQ・東証の両上場までを見届けて、役割を果たし切る形で役員を退任。現在は、自身の家族資産管理法人の経営に専念し、AI×不動産の知見を活かした不動産資産運用を行っている。</p>
+          <p class="src"><span class="media-name">PR TIMES</span>（2025年6月2日）「クミカ、シーラホールディングスへ商号変更」<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000006.000143674.html">prtimes.jp/main/html/rd/p/<wbr>000000006.000143674.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p23.jpg" alt="シーラホールディングス（スタンダード：8887）決算説明資料">
+          <div class="cap">シーラホールディングス（旧クミカ・スタンダード：8887）決算説明資料より</div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ================= MEDIA LIST ================= -->
+  <section>
+    <h2>メディア掲載・出演一覧<span class="en">MEDIA</span></h2>
+    <table class="media-table">
+      <tr><th>時期</th><th>媒体</th><th>内容</th></tr>
+      <tr><td class="d">2019年2月</td><td class="m">ITmedia NEWS</td><td>DeNA TechCon 2019 フレーム補間技術の発表<br><a href="https://www.itmedia.co.jp/news/articles/1902/07/news095.html">itmedia.co.jp/news/articles/1902/07/news095.html</a></td></tr>
+      <tr><td class="d">2020年</td><td class="m">ABEMA Prime</td><td>コロナ禍の不動産市況解説（複数回出演）</td></tr>
+      <tr><td class="d">2020年11月</td><td class="m">ハーバー・ビジネス・オンライン</td><td>「Googleも認めた天才が導き出した戦略。AIで勝つ不動産投資」<br><a href="https://hbol.jp/pc/232428/2/">hbol.jp/pc/232428/2/</a></td></tr>
+      <tr><td class="d">2022年2月</td><td class="m">PR TIMES</td><td>シーラグループ新経営体制発足（執行役員就任）<br><a href="https://prtimes.jp/main/html/rd/p/000000027.000050760.html">prtimes.jp/main/html/rd/p/000000027.000050760.html</a></td></tr>
+      <tr><td class="d">2023年</td><td class="m">TBS news23</td><td>不動産業界のChatGPT活用特集で取材<br><a href="https://youtu.be/5dfu0bnIThw">youtu.be/5dfu0bnIThw</a></td></tr>
+      <tr><td class="d">2023年6月</td><td class="m">日本経済新聞</td><td>「画像生成AIの学習環境整備へ　コンソーシアム設立」（JIGAC）<br><a href="https://www.nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/">nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/</a></td></tr>
+      <tr><td class="d">2023年6月</td><td class="m">日本経済新聞</td><td>「さらばIPO後進国ニッポン　国内起業家、米ナスダックへ」<br><a href="https://www.nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/">nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/</a></td></tr>
+      <tr><td class="d">2023年</td><td class="m">ABEMA Prime</td><td>「新築マンションはどこまで上がる？」ほかスタジオ出演<br><a href="https://youtu.be/IACYugVFkCc">youtu.be/IACYugVFkCc</a></td></tr>
+      <tr><td class="d">2025年4月</td><td class="m">楽待チャンネル（YouTube）</td><td>安野貴博氏とAI×不動産をテーマに対談<br><a href="https://youtu.be/D5KXi3YbLIs">youtu.be/D5KXi3YbLIs</a></td></tr>
+      <tr><td class="d">2025年5月</td><td class="m">日経BP（書籍）</td><td>『不動産AI成功パターン』にて「価格算出AIパターン」を執筆<br><a href="https://prtimes.jp/main/html/rd/p/000000003.000120682.html">prtimes.jp/main/html/rd/p/000000003.000120682.html</a></td></tr>
+      <tr><td class="d">2025年6月</td><td class="m">PR TIMES</td><td>「クミカ、シーラホールディングスへ商号変更」（東証スタンダード：8887）<br><a href="https://prtimes.jp/main/html/rd/p/000000006.000143674.html">prtimes.jp/main/html/rd/p/000000006.000143674.html</a></td></tr>
+    </table>
+  </section>
+
+  </div><!-- /content -->
+
+  <footer class="foot">李 天琦 ─ PROFILE ｜ 2026</footer>
+</div>
+</body>
+</html>

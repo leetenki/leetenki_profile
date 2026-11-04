@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Li Tianqi | Profile</title>
+<style>
+  :root {
+    --navy: #0f2740;
+    --navy-2: #1b3a5c;
+    --gold: #b08d3e;
+    --gold-light: #d4b46a;
+    --ink: #232a33;
+    --gray: #5f6b78;
+    --line: #dde3ea;
+    --bg: #f6f8fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Helvetica Neue", "Segoe UI", Arial, "Hiragino Sans", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.75;
+    font-size: 14.5px;
+  }
+  .sheet { max-width: 860px; margin: 0 auto; background: #fff; box-shadow: 0 0 24px rgba(15,39,64,.10); }
+
+  /* ===== Hero ===== */
+  .hero { background: linear-gradient(135deg, #0c2036 0%, #16354f 55%, #1d4266 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero::after { content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px; border:1px solid rgba(212,180,106,.25); border-radius:50%; }
+  .hero::before { content:""; position:absolute; right:-40px; top:-40px; width:340px; height:340px; border:1px solid rgba(212,180,106,.15); border-radius:50%; }
+  .hero-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; align-items: stretch; }
+  .hero-text { padding: 46px 20px 38px 46px; position: relative; z-index: 2; }
+  .hero-label { font-size: 11.5px; letter-spacing: .35em; color: var(--gold-light); font-weight: 600; margin-bottom: 18px; }
+  .hero-name { font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif; font-size: 50px; font-weight: 600; letter-spacing: .04em; line-height: 1.15; }
+  .hero-name small { display:block; font-size: 13px; letter-spacing: .22em; color: #b8c6d4; margin-top: 10px; font-weight: 400; font-family: "Hiragino Sans", "Helvetica Neue", sans-serif; }
+  .hero-title { margin-top: 20px; font-size: 15px; color: #e8eef4; font-weight: 600; }
+  .hero-sub { margin-top: 6px; font-size: 12.5px; color: #a9bac9; line-height: 1.8; }
+  .hero-photo { position: relative; min-height: 300px; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-photo::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, #12304b 0%, rgba(18,48,75,0) 30%); }
+
+  /* stat chips */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--navy); border-top: 1px solid rgba(212,180,106,.35); }
+  .stat { padding: 16px 10px 18px; text-align: center; border-right: 1px solid rgba(255,255,255,.08); }
+  .stat:last-child { border-right: none; }
+  .stat .num { font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif; font-size: 18px; color: var(--gold-light); font-weight: 600; letter-spacing: .06em; white-space: nowrap; }
+  .stat .num.sm { font-size: 14.5px; letter-spacing: .02em; line-height: 1.9; }
+  .stat .label { font-size: 10.5px; color: #9fb2c2; margin-top: 3px; letter-spacing: .04em; }
+
+  /* ===== Sections ===== */
+  .content { padding: 42px 46px 50px; }
+  section { margin-bottom: 46px; }
+  h2 { font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif; font-weight: 600; font-size: 21px; color: var(--navy); letter-spacing: .1em; display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+  h2::before { content:""; width: 30px; height: 2px; background: var(--gold); flex-shrink: 0; }
+  h2 .en { font-family: "Hiragino Sans", sans-serif; font-size: 10px; letter-spacing: .3em; color: var(--gold); font-weight: 600; margin-left: auto; }
+
+  .lead { font-size: 14.5px; line-height: 2.0; text-align: justify; }
+  .lead strong { color: var(--navy); font-weight: 700; }
+
+  /* ===== Timeline table ===== */
+  .tl { width: 100%; border-collapse: collapse; }
+  .tl td { padding: 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13.5px; }
+  .tl td.d { width: 110px; color: var(--navy); font-weight: 700; font-feature-settings: "tnum"; white-space: nowrap; }
+  .tl td.b { padding-left: 18px; position: relative; }
+  .tl td.b::before { content:""; position:absolute; left: 4px; top: 15px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+  .tl tr.hl td { background: #f9f5ec; }
+  .tl tr.hl td.b { font-weight: 600; }
+
+  /* ===== Highlight cards ===== */
+  .card { border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 4px; padding: 22px 24px 20px; margin-bottom: 22px; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+  .card-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+  .card-head .date { font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif; color: var(--gold); font-weight: 600; font-size: 13.5px; letter-spacing: .06em; white-space: nowrap; }
+  .card-head h3 { font-size: 17px; color: var(--navy); letter-spacing: .02em; }
+  .card-body { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; align-items: start; }
+  .card-body.wide { grid-template-columns: 1fr; }
+  .card p { font-size: 13.5px; text-align: justify; margin-bottom: 8px; }
+  .card .src { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 12px; color: var(--gray); }
+  .card .src a { color: var(--navy-2); word-break: normal; overflow-wrap: break-word; text-decoration: none; border-bottom: 1px solid #c3cfda; }
+  .card .src .media-name { font-weight: 700; color: var(--ink); }
+  .imgs { display: grid; gap: 8px; }
+  .imgs img { width: 100%; display: block; border-radius: 3px; border: 1px solid var(--line); }
+  .imgs.g2 { grid-template-columns: 1fr 1fr; }
+  .imgs.ar32 img { aspect-ratio: 3 / 2; object-fit: cover; }
+  .imgs.ar97 img { aspect-ratio: 9 / 7; object-fit: cover; }
+  .imgs .span2 { grid-column: span 2; }
+  .cap { font-size: 11px; color: var(--gray); margin-top: 2px; line-height: 1.5; }
+
+  /* ===== Media list ===== */
+  .media-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .media-table th { background: var(--navy); color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; letter-spacing: .05em; }
+  .media-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .media-table td.d { white-space: nowrap; color: var(--navy); font-weight: 600; width: 84px; }
+  .media-table td.m { font-weight: 600; width: 130px; }
+  .media-table a { color: var(--navy-2); word-break: break-all; text-decoration: none; border-bottom: 1px solid #c3cfda; font-size: 11.5px; }
+
+  /* ===== Footer ===== */
+  .foot { background: var(--navy); color: #9fb2c2; text-align: center; padding: 16px; font-size: 11px; letter-spacing: .1em; }
+
+  /* ===== Print button & language switcher ===== */
+  .print-btn { position: fixed; top: 18px; right: 18px; background: var(--navy); color: #fff; border: 1px solid var(--gold); border-radius: 6px; padding: 10px 18px; font-size: 13px; cursor: pointer; box-shadow: 0 4px 14px rgba(15,39,64,.35); z-index: 99; font-family: inherit; }
+  .print-btn:hover { background: var(--navy-2); }
+  .lang { position: fixed; top: 18px; left: 18px; z-index: 99; display: flex; gap: 6px; align-items: center; }
+  .lang a { background: rgba(15,39,64,.88); color: #dfe7ee; border: 1px solid rgba(212,180,106,.5); border-radius: 6px; padding: 8px 13px; font-size: 12px; text-decoration: none; box-shadow: 0 4px 14px rgba(15,39,64,.25); }
+  .lang a:hover { background: var(--navy-2); }
+  .lang a.active { background: var(--gold); color: #0f2740; font-weight: 700; border-color: var(--gold); }
+
+  /* ===== Print ===== */
+  @page { size: A4; margin: 11mm 11mm 13mm; }
+  @media print {
+    body { background: #fff; font-size: 12.5px; }
+    .sheet { max-width: none; box-shadow: none; }
+    .print-btn, .lang { display: none; }
+    .hero-text { padding: 30px 16px 26px 34px; }
+    .hero-name { font-size: 40px; }
+    .content { padding: 26px 6px 10px; }
+    section { margin-bottom: 30px; }
+    .card { margin-bottom: 14px; padding: 16px 18px 14px; }
+    .card p { font-size: 12px; }
+    .tl td { font-size: 12px; padding: 5px 0; }
+    a { color: var(--navy-2) !important; }
+    .hero-photo { min-height: 260px; }
+  }
+  @media (max-width: 700px) {
+    .lang { position: static; padding: 10px 12px; background: linear-gradient(135deg, #0c2036 0%, #16354f 100%); }
+    .lang a { padding: 7px 10px; font-size: 11.5px; box-shadow: none; }
+    .print-btn { position: static; margin-left: auto; padding: 7px 10px; font-size: 11.5px; box-shadow: none; }
+    .hero-inner, .card-body { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .content { padding: 28px 20px 36px; }
+    .hero-text { padding: 34px 24px; }
+    .hero-name { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+<nav class="lang"><a href="./">日本語</a><a href="./en.html" class="active">EN</a><a href="./zh.html">中文</a><button class="print-btn" onclick="window.print()">🖨 Print / Save PDF</button></nav>
+<div class="sheet">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-label">PROFILE</div>
+        <h1 class="hero-name">Li Tianqi<small>李 天琦 ／ LI TIANQI</small></h1>
+        <div class="hero-title">AI Researcher × Real Estate Investor &amp; Entrepreneur</div>
+        <div class="hero-sub">Began his career as an AI researcher at DeNA, then founded an AI × real estate startup. The company joined the SYLA Group, where he served on the executive team through its U.S. NASDAQ listing (2023) and Tokyo Stock Exchange listing (2025).</div>
+      </div>
+      <div class="hero-photo"><img src="img/p01.jpg" alt="Li Tianqi presenting at DeNA TechCon 2019"></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">NASDAQ</div><div class="label">U.S. listing experience (2023)</div></div>
+      <div class="stat"><div class="num">TSE Listed</div><div class="label">SYLA HD, Standard Market (2025)</div></div>
+      <div class="stat"><div class="num sm">SoftBank &amp; DeNA</div><div class="label">Backed by both groups' funds</div></div>
+      <div class="stat"><div class="num sm">Nikkei・TBS・ABEMA</div><div class="label">Extensive media coverage</div></div>
+    </div>
+  </header>
+
+  <div class="content">
+
+  <!-- ================= SUMMARY ================= -->
+  <section>
+    <h2>Overview<span class="en">概要</span></h2>
+    <p class="lead">
+      Born in Suzhou, China in 1989, he moved to Japan at age 10 with his father, a pianist. He began deep-learning research while still in university, and in 2015 was <strong>invited to lecture at Google Japan on autonomous driving technology using deep reinforcement learning</strong>. After graduating top of his class from Tokyo University of Technology, he joined <strong>DeNA's AI R&amp;D division</strong>, where he conducted world-leading research in video-generation AI.
+    </p>
+    <p class="lead" style="margin-top:10px">
+      In 2019, with DeNA's backing, he founded <strong>DEVEL Inc. (now SYLA BRAIN)</strong>, a startup that analyzes the real estate market with AI. After raising capital from both a SoftBank Group fund and a DeNA fund, the company formed a capital alliance with proptech firm SYLA in 2021, becoming a wholly owned subsidiary. As <strong>Executive Officer &amp; CAIO (Chief AI Officer) of SYLA Technologies</strong>, he helped lead the company's <strong>NASDAQ listing in 2023</strong> and <strong>SYLA HOLDINGS' TSE Standard Market listing in 2025</strong>. Having stepped down as an officer after the TSE listing, he now devotes himself to managing his family asset-management companies. An investor who develops and operates his own AI-based property price analysis systems, he puts his AI × real estate expertise to work in asset management.
+    </p>
+  </section>
+
+  <!-- ================= TIMELINE ================= -->
+  <section>
+    <h2>Career Timeline<span class="en">経歴</span></h2>
+    <table class="tl">
+      <tr><td class="d">Jul 1989</td><td class="b">Born in Suzhou, China</td></tr>
+      <tr><td class="d">Jan 2000</td><td class="b">Moved to Japan with his father, a pianist</td></tr>
+      <tr><td class="d">Sep 2012</td><td class="b">Drawn to real estate; built a proprietary AI-based price analysis system</td></tr>
+      <tr><td class="d">Feb 2014</td><td class="b">Internship at Microsoft Japan</td></tr>
+      <tr><td class="d">Mar 2014</td><td class="b">Won the Nippon Venture Capital University Hackathon 2014</td></tr>
+      <tr><td class="d">Jun 2015</td><td class="b">Invited lecture at Google Japan on deep reinforcement learning for autonomous driving</td></tr>
+      <tr><td class="d">Mar 2016</td><td class="b">Graduated top of his class from Tokyo University of Technology</td></tr>
+      <tr><td class="d">Apr 2016</td><td class="b">Joined DeNA; AI research and development in the Systems Division</td></tr>
+      <tr class="hl"><td class="d">Oct 2019</td><td class="b">Founded DEVEL Inc. (now SYLA BRAIN) with DeNA's support</td></tr>
+      <tr><td class="d">Feb 2020</td><td class="b">Raised funding from a SoftBank Group fund and a DeNA fund</td></tr>
+      <tr><td class="d">Oct 2021</td><td class="b">Capital alliance with SYLA; sold shares, became a wholly owned subsidiary</td></tr>
+      <tr><td class="d">Aug 2022</td><td class="b">Appointed Executive Officer &amp; CAIO of SYLA Technologies</td></tr>
+      <tr class="hl"><td class="d">Mar 2023</td><td class="b">SYLA Technologies listed on NASDAQ, New York</td></tr>
+      <tr><td class="d">May 2025</td><td class="b">Authored "Pricing AI Patterns" in <i>Real Estate AI Success Patterns</i> (Nikkei BP)</td></tr>
+      <tr class="hl"><td class="d">Jun 2025</td><td class="b">Merged with CUMICA; SYLA HOLDINGS (ticker: 8887) listed on the TSE Standard Market</td></tr>
+    </table>
+  </section>
+
+  <!-- ================= HIGHLIGHTS ================= -->
+  <section>
+    <h2>Highlights<span class="en">実績</span></h2>
+
+    <article class="card">
+      <div class="card-head"><span class="date">Jun 2015</span><h3>Invited Lecture at Google Japan — at the AI frontier since his student days</h3></div>
+      <div class="card-body">
+        <div>
+          <p>While still in university, he researched autonomous-driving simulation using deep reinforcement learning. The work earned him an invitation to speak at Google Japan. With an internship at Microsoft Japan and a win at the Nippon Venture Capital University Hackathon 2014, his technical talent stood out early — and he graduated top of his class from Tokyo University of Technology.</p>
+        </div>
+        <div class="imgs">
+          <img src="img/p02.jpg" alt="Invited lecture at Google Japan">
+          <div class="cap">Invited lecture at Google Japan (2015)</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2016–2019</span><h3>AI R&amp;D at DeNA — presented world-leading video-generation AI research</h3></div>
+      <div class="card-body">
+        <div>
+          <p>At DeNA's Systems Division AI R&amp;D group, he worked on computer vision research. At DeNA TechCon 2019 he presented research on frame interpolation — automatically generating the frames between video frames — achieving what was then world-leading performance, and drawing coverage from tech media such as ITmedia.</p>
+          <p class="src"><span class="media-name">ITmedia NEWS</span> (Feb 7, 2019): coverage of the frame-interpolation research presented at DeNA TechCon 2019<br>
+          <a href="https://www.itmedia.co.jp/news/articles/1902/07/news095.html">itmedia.co.jp/news/articles/<wbr>1902/07/news095.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p03.jpg" alt="Frame interpolation presentation at DeNA TechCon 2019">
+          <div class="cap">Presenting at DeNA TechCon 2019</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">Oct 2019</span><h3>Founded DEVEL Inc. — backed by SoftBank and DeNA funds</h3></div>
+      <div class="card-body">
+        <div>
+          <p>With DeNA's support he went independent, founding DEVEL Inc. (now SYLA BRAIN) to build systems that use AI to analyze and appraise all real estate data available online in Japan. Based at KERNEL HONGO — SoftBank Group's AI-focused incubation hub run by DEEPCORE — the company raised funding from a SoftBank Group fund and a DeNA fund in February 2020.</p>
+        </div>
+        <div class="imgs g2 ar32">
+          <img src="img/p04.jpg" alt="Farewell gathering at DeNA">
+          <img src="img/p05.jpg" alt="KERNEL HONGO by DEEPCORE">
+          <div class="cap span2">Left: farewell from colleagues at DeNA. Right: at KERNEL HONGO, SoftBank's AI incubation hub</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">Jun 2020</span><h3>Paper at JSAI2020 — then among Japan's most accurate real estate pricing AI</h3></div>
+      <div class="card-body">
+        <div>
+          <p>Built an AI model for high-accuracy real estate price estimation and presented it at JSAI2020, the annual conference of the Japanese Society for Artificial Intelligence. By incorporating Japan-specific price drivers such as condominium brands and location, the model far outperformed prior research and achieved what was then among the highest accuracy in Japan (8.35% mean error).</p>
+          <p class="src"><span class="media-name">JSAI2020</span> (Jun 11, 2020): "Constructing a highly accurate price prediction model in real estate investment using LightGBM"<br>
+          <a href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2020/0/JSAI2020_3Rin449/_article/-char/ja/" target="_blank" rel="noopener">jstage.jst.go.jp/article/pjsai/<wbr>JSAI2020/0/JSAI2020_3Rin449/</a>　<a href="papers/jsai2020_3Rin4-49.pdf" target="_blank" rel="noopener">Paper (PDF)</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p24.jpg" alt="JSAI2020 paper: Constructing a highly accurate price prediction model in real estate investment using LightGBM">
+          <div class="cap">From the paper presented at JSAI2020</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2020</span><h3>Data-driven commentary on the COVID-era property market</h3></div>
+      <div class="card-body">
+        <div>
+          <p>In 2020, amid pandemic uncertainty, he appeared repeatedly on the news program ABEMA Prime as a market commentator grounded in AI data analysis, discussing topics such as why transaction volumes stayed resilient and the "buy vs. rent" debate.</p>
+          <p>That same year, a Harbor Business Online feature — "The strategy of a genius recognized by Google: winning at real estate investment with AI" — profiled his AI-driven property screening methods and his track record investing in prime central-Tokyo properties.</p>
+          <p class="src"><span class="media-name">Harbor Business Online</span> (Nov 19, 2020)<br>
+          <a href="https://hbol.jp/pc/232428/2/">hbol.jp/pc/232428/2/</a></p>
+        </div>
+        <div class="imgs g2">
+          <img src="img/p06.jpg" alt="ABEMA Prime appearance as CEO of DEVEL">
+          <img src="img/p07.jpg" alt="ABEMA Prime market analysis">
+          <img src="img/p08.jpg" alt="ABEMA Prime remote appearance">
+          <img src="img/p09.jpg" alt="ABEMA Prime buy vs rent debate">
+          <div class="cap span2">Appearances on ABEMA Prime, incl. "Would you buy a home in these times?" (2020)</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2021–2022</span><h3>Joined the SYLA Group — appointed Executive Officer &amp; CAIO</h3></div>
+      <div class="card-body">
+        <div>
+          <p>In October 2021, DEVEL formed a capital alliance with proptech company SYLA, becoming a wholly owned subsidiary and renaming itself SYLA BRAIN. Named to the group's new management team announced in February 2022, he was appointed Executive Officer, and in August 2022 became CAIO (Chief AI Officer), leading group-wide technology strategy with AI and RPA.</p>
+          <p class="src"><span class="media-name">PR TIMES</span> (Feb 3, 2022): "SYLA Group, on a mission to democratize real estate investment, announces its new management structure"<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000027.000050760.html">prtimes.jp/main/html/rd/p/<wbr>000000027.000050760.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p10.jpg" alt="With SYLA Group founder Hiroyuki Sugimoto">
+          <div class="cap">With SYLA Group founder Hiroyuki Sugimoto</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">Mar 2023</span><h3>NASDAQ Listing — bringing a Japanese company to the U.S. market as an executive</h3></div>
+      <div class="card-body">
+        <div>
+          <p>On March 31, 2023, SYLA Technologies listed on the NASDAQ in New York (ticker: SYT). He supported the listing as Executive Officer &amp; CAIO, and was the group's third-largest individual shareholder at the time. A U.S. listing by a Japanese proptech company is exceptionally rare, and was featured in Nikkei's article "Farewell, IPO-laggard Japan — Japanese founders head to NASDAQ." During the ceremony he appeared on the NASDAQ billboard in Times Square.</p>
+          <p class="src"><span class="media-name">Nikkei</span> (Jun 27, 2023): "Farewell, IPO-laggard Japan — Japanese founders head to NASDAQ"<br>
+          <a href="https://www.nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/">nikkei.com/article/<wbr>DGXZQOUB194UK0Z10C23A6000000/</a></p>
+        </div>
+        <div class="imgs g2 ar97">
+          <img src="img/p11.jpg" alt="NASDAQ listing ceremony">
+          <img src="img/p12.jpg" alt="NASDAQ billboard in Times Square">
+          <img src="img/p13.jpg" alt="NASDAQ listing ceremony group photo">
+          <img src="img/p14.jpg" alt="NASDAQ IPO commemorative plaque">
+          <div class="cap span2">Listing ceremony at NASDAQ MarketSite, the Times Square billboard, and the IPO plaque (Mar 31, 2023)</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023</span><h3>TBS "news23" — profiled as a pioneer of ChatGPT adoption in real estate</h3></div>
+      <div class="card-body">
+        <div>
+          <p>In 2023, at the dawn of the generative-AI boom, TBS's flagship news program "news23" covered "GOD-GPT," the in-house AI platform he led, which streamlines real estate operations — from auto-generating property descriptions to handling English-language communication with overseas investors — showcased nationwide as a leading example of generative AI in real estate.</p>
+          <p class="src"><span class="media-name">TBS news23</span> (2023): feature segment<br>
+          <a href="https://youtu.be/5dfu0bnIThw">youtu.be/5dfu0bnIThw</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p15.jpg" alt="TBS news23 interview">
+          <img src="img/p16.jpg" alt="GOD-GPT screen">
+          <div class="cap">From TBS "news23" — the in-house AI platform "GOD-GPT"</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">Jun 2023</span><h3>Co-founding participant in the Japan Image Generation AI Consortium (JIGAC)</h3></div>
+      <div class="card-body">
+        <div>
+          <p>He took part, as an AI developer, in founding the Japan Image Generation AI Consortium (JIGAC) — an industry body organizing the legal and ethical issues around training image-generation AI — and appeared at its launch event alongside University of Tokyo professors and leading lawyers, helping shape the rules of Japan's generative AI industry. The founding was reported by Nikkei.</p>
+          <p class="src"><span class="media-name">Nikkei</span> (Jun 20, 2023): "Consortium founded to improve the training environment for image-generation AI"<br>
+          <a href="https://www.nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/">nikkei.com/article/<wbr>DGXZQOUC204R70Q3A620C2000000/</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p17.jpg" alt="JIGAC launch event">
+          <div class="cap">At the JIGAC launch event (June 2023)</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">2023</span><h3>ABEMA Prime studio appearances — on Tokyo real estate and AI</h3></div>
+      <div class="card-body">
+        <div>
+          <p>Appeared in the studio as an expert — introduced as "SYLA Technologies Executive Officer; AI analysis of real estate data; authority on Chinese investment trends" — discussing how overseas investors view Tokyo property under the weak yen, and how AI can transform Japan's famously analog real estate industry.</p>
+          <p class="src"><span class="media-name">ABEMA Prime</span> (May 1, 2023): "Soaring property prices — how high will new condominiums go, and why do overseas investors still see value?" and other episodes<br>
+          <a href="https://youtu.be/IACYugVFkCc">youtu.be/IACYugVFkCc</a></p>
+        </div>
+        <div class="imgs g2">
+          <img src="img/p18.jpg" alt="ABEMA Prime studio appearance">
+          <img src="img/p19.jpg" alt="ABEMA Prime Tokyo real estate commentary">
+          <img src="img/p20.jpg" alt="ABEMA Prime studio wide shot">
+          <img src="img/p21.jpg" alt="ABEMA Prime land value analysis">
+          <div class="cap span2">ABEMA Prime appearances incl. "How overseas investors see Japanese housing"</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">Apr 2025</span><h3>Rakumachi Channel — discussing AI × real estate with Takahiro Anno</h3></div>
+      <div class="card-body">
+        <div>
+          <p>In April 2025, he appeared on "The Future of AI × Real Estate," a talk program on the YouTube channel of the real estate investment platform Rakumachi, joining AI engineer, entrepreneur and science-fiction author Takahiro Anno and real estate consultant Osamu Nagashima (Chairman, Sakura Jimusho) to discuss how AI will transform real estate transactions.</p>
+          <p>On the program he presented "GOD AI," the real estate investment AI he built and has used for his own property purchases, explaining how it automatically collects the vast volume of listings posted to portals every day and uses AI to assess discounts and yields to surface promising deals. He also stressed that human judgment remains essential for factors the data cannot capture, such as a seller's circumstances or legal restrictions, and predicted that aesthetic value such as exterior design will increasingly be factored into AI's judgment.</p>
+          <p class="src"><span class="media-name">Rakumachi (YouTube)</span> (Apr 20, 2025): "Takahiro Anno vs. the real estate industry — can the AI revolution change an ultra-analog industry?"<br>
+          <a href="https://youtu.be/D5KXi3YbLIs">youtu.be/D5KXi3YbLIs</a></p>
+        </div>
+        <div class="imgs">
+          <div class="cap">In conversation with Takahiro Anno and Osamu Nagashima on Rakumachi Channel (Apr 2025)</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">May 2025</span><h3>Authored part of <i>Real Estate AI Success Patterns</i> (Nikkei BP)</h3></div>
+      <div class="card-body">
+        <div>
+          <p>For <i>Real Estate AI Success Patterns</i> (Nikkei BP, published May 26, 2025) — a hands-on guide to AI implementation in the real estate industry by the Property &amp; Construction Data Utilization Association (PCDUA) — he authored "Pricing AI Patterns," systematizing the property price-estimation AI expertise he has developed and operated since his student days.</p>
+          <p class="src"><span class="media-name">PR TIMES</span> (May 19, 2025): "Announcing the publication of <i>Real Estate AI Success Patterns</i>"<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000003.000120682.html">prtimes.jp/main/html/rd/p/<wbr>000000003.000120682.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p22.jpg" alt="Real Estate AI Success Patterns book announcement">
+          <div class="cap"><i>Real Estate AI Success Patterns</i> (Nikkei BP, May 26, 2025)</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><span class="date">Jun 2025</span><h3>TSE Standard Market Listing — SYLA HOLDINGS (ticker: 8887)</h3></div>
+      <div class="card-body">
+        <div>
+          <p>Through a business combination with TSE Standard-listed CUMICA Co., Ltd. (ticker: 8887), CUMICA was renamed SYLA HOLDINGS — effectively completing the SYLA Group's listing on the Tokyo Stock Exchange.</p>
+          <p>Having built the company he founded into the group's core AI subsidiary (SYLA BRAIN), and seen it through from his exit by share sale to both the NASDAQ and TSE listings, he stepped down as an officer with his mission complete. He now devotes himself to managing his family asset-management companies, applying his AI × real estate expertise to property investment.</p>
+          <p class="src"><span class="media-name">PR TIMES</span> (Jun 2, 2025): "CUMICA renamed SYLA HOLDINGS"<br>
+          <a href="https://prtimes.jp/main/html/rd/p/000000006.000143674.html">prtimes.jp/main/html/rd/p/<wbr>000000006.000143674.html</a></p>
+        </div>
+        <div class="imgs">
+          <img src="img/p23.jpg" alt="SYLA HOLDINGS (Standard: 8887) results presentation">
+          <div class="cap">From SYLA HOLDINGS' (formerly CUMICA; Standard: 8887) financial results presentation</div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ================= MEDIA LIST ================= -->
+  <section>
+    <h2>Media<span class="en">メディア</span></h2>
+    <table class="media-table">
+      <tr><th>Date</th><th>Outlet</th><th>Details</th></tr>
+      <tr><td class="d">Feb 2019</td><td class="m">ITmedia NEWS</td><td>Frame-interpolation research presented at DeNA TechCon 2019<br><a href="https://www.itmedia.co.jp/news/articles/1902/07/news095.html">itmedia.co.jp/news/articles/1902/07/news095.html</a></td></tr>
+      <tr><td class="d">2020</td><td class="m">ABEMA Prime</td><td>Commentary on the COVID-era property market (multiple appearances)</td></tr>
+      <tr><td class="d">Nov 2020</td><td class="m">Harbor Business Online</td><td>"The strategy of a genius recognized by Google: winning at real estate investment with AI"<br><a href="https://hbol.jp/pc/232428/2/">hbol.jp/pc/232428/2/</a></td></tr>
+      <tr><td class="d">Feb 2022</td><td class="m">PR TIMES</td><td>SYLA Group's new management structure (appointed Executive Officer)<br><a href="https://prtimes.jp/main/html/rd/p/000000027.000050760.html">prtimes.jp/main/html/rd/p/000000027.000050760.html</a></td></tr>
+      <tr><td class="d">2023</td><td class="m">TBS news23</td><td>Featured for pioneering ChatGPT adoption in real estate<br><a href="https://youtu.be/5dfu0bnIThw">youtu.be/5dfu0bnIThw</a></td></tr>
+      <tr><td class="d">Jun 2023</td><td class="m">Nikkei</td><td>"Consortium founded to improve the training environment for image-generation AI" (JIGAC)<br><a href="https://www.nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/">nikkei.com/article/DGXZQOUC204R70Q3A620C2000000/</a></td></tr>
+      <tr><td class="d">Jun 2023</td><td class="m">Nikkei</td><td>"Farewell, IPO-laggard Japan — Japanese founders head to NASDAQ"<br><a href="https://www.nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/">nikkei.com/article/DGXZQOUB194UK0Z10C23A6000000/</a></td></tr>
+      <tr><td class="d">2023</td><td class="m">ABEMA Prime</td><td>Studio appearances incl. "How high will new condominiums go?"<br><a href="https://youtu.be/IACYugVFkCc">youtu.be/IACYugVFkCc</a></td></tr>
+      <tr><td class="d">Apr 2025</td><td class="m">Rakumachi Channel (YouTube)</td><td>Discussion on AI × real estate with Takahiro Anno<br><a href="https://youtu.be/D5KXi3YbLIs">youtu.be/D5KXi3YbLIs</a></td></tr>
+      <tr><td class="d">May 2025</td><td class="m">Nikkei BP (book)</td><td>Authored "Pricing AI Patterns" in <i>Real Estate AI Success Patterns</i><br><a href="https://prtimes.jp/main/html/rd/p/000000003.000120682.html">prtimes.jp/main/html/rd/p/000000003.000120682.html</a></td></tr>
+      <tr><td class="d">Jun 2025</td><td class="m">PR TIMES</td><td>"CUMICA renamed SYLA HOLDINGS" (TSE Standard: 8887)<br><a href="https://prtimes.jp/main/html/rd/p/000000006.000143674.html">prtimes.jp/main/html/rd/p/000000006.000143674.html</a></td></tr>
+    </table>
+  </section>
+
+  </div><!-- /content -->
+
+  <footer class="foot">LI TIANQI ─ PROFILE ｜ 2026</footer>
+</div>
+</body>
+</html>
