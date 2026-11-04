@@ -12,6 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(ROOT, '_build')
 LIGHTBOX = '/Users/leetenki/AI_share/.claude/skills/property-site/scripts/lightbox.py'
 
+SITE = 'https://leetenki.github.io/leetenki_profile/'  # リンクのサムネ（OGP）用の絶対URL
 LANGS = {
     'ja': dict(out='index.html', html='ja', pdf='李天琦_紹介資料.pdf',
                font='"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif',
@@ -134,6 +135,16 @@ def render(lang):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{d['title']}</title>
 <meta name="robots" content="noindex, nofollow">
+<meta name="description" content="{d['role']}">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{d['title']}">
+<meta property="og:description" content="{d['role']}">
+<meta property="og:url" content="{SITE}{'' if L['out'] == 'index.html' else L['out']}">
+<meta property="og:image" content="{SITE}img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE}img/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%230b0d10%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 text-anchor=%27middle%27 fill=%27%23c9a962%27 font-family=%27sans-serif%27%3ELT%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
