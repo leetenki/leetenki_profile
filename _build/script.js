@@ -11,7 +11,7 @@
     v.load();}
   // hero: PCは横長版、スマホ（幅760px未満）は同じ流れを中央で縦長4:5に切った版（2026-11-05）
   var hv=document.getElementById('heroVideo'), hp=document.getElementById('heroPoster');
-  var base=window.innerWidth<760?'video/hero9_sp45':'video/hero8_land';
+  var base=window.innerWidth<760?'video/hero11_sp45':'video/hero8_land';
   hp.src=base+'.poster.jpg';
   if(!saveData){
     addSrc(hv,base+'.webm',base+'.mp4');
