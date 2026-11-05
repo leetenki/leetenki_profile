@@ -9,12 +9,10 @@
     v.autoplay=true; v.setAttribute('autoplay','');
     ['loadedmetadata','loadeddata','canplay','canplaythrough'].forEach(function(t){v.addEventListener(t,function(){ if(v.paused&&(v===hv||v.dataset.vis)){tryPlay(v);} });});
     v.load();}
-  // hero: 縦画面はスマホ版、横画面はPC版
+  // hero: スマホもPCと同じ横長版（スマホは横幅に合わせて全体を表示、2026-11-05）
   var hv=document.getElementById('heroVideo'), hp=document.getElementById('heroPoster');
-  var portrait=window.innerWidth<window.innerHeight;
-  hp.src=portrait?'video/hero6_port.poster.jpg':'video/hero5_land.poster.jpg';
   if(!saveData){
-    var base=portrait?'video/hero6_port':'video/hero5_land';
+    var base='video/hero5_land';
     addSrc(hv,base+'.webm',base+'.mp4');
     hv.addEventListener('playing',function(){hp.style.transition='opacity 1s';hp.style.opacity='0';},{once:true});
     tryPlay(hv);
