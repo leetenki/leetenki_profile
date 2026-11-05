@@ -31,7 +31,7 @@ CARD_VIDEO = {}  # 2023年NASDAQは CARD_MOVIE に移した（以前は {5: 'nas
 # 例: CARD_CLIP = {3: 'abema2020', 6: 'tbs', 8: 'abema2023'}
 CARD_CLIP = {}
 # 写真の代わりに横幅いっぱいの動画を置くカード（番号は実績カードの並び順・0始まり。カードを足したらずらす）: (PC用の動画, スマホ用の動画, クリック先)。スマホ用は縦横比4:3なら寄せた版
-CARD_MOVIE = {1: ('dena_techcon_w', 'dena_techcon2', 'https://youtu.be/5OuwwV_RwPU?t=1083'),
+CARD_MOVIE = {1: ('dena_techcon_pb', 'dena_techcon_pb43', 'https://youtu.be/5OuwwV_RwPU?t=1083'),
               4: ('abema2020', 'abema2020', 'https://youtu.be/PrlyDQ1_6Us?t=144'),
               6: ('nasdaq_fix_land', 'nasdaq_fix_port', 'https://youtu.be/hfWxPv_i40o?t=83', '916'),  # 確定版（2026-11-05 fix）。heroとは別ファイルなのでheroを替えても変わらない
               7: ('tbs2023', 'tbs2023', 'https://youtu.be/5dfu0bnIThw'),  # クリック先は出典のVTR
@@ -162,7 +162,7 @@ def render(lang):
 
 <header class="hero">
   <video id="heroVideo" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" autoplay preload="auto" aria-hidden="true"></video>
-  <img class="poster" id="heroPoster" src="video/hero5_land.poster.jpg" alt="" aria-hidden="true">
+  <img class="poster" id="heroPoster" src="video/hero7_land.poster.jpg" alt="" aria-hidden="true">
   <div class="in">
     <p class="en">{first.strip()}</p>
     <h1 class="nm">{d['name']}<small>{d['name_small']}</small></h1>
